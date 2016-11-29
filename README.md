@@ -161,4 +161,5 @@ JavaScript的语法类似于Java因此并不难学，这里给一个学习目前
 * 好的网页不仅仅依靠开发者的编程水平、强大的后台技术，也依赖于网页设计、美工素材和交互逻辑；为了技术而技术，是技术的死胡同。
 * 要多学习借鉴，尽量避免造轮子。
 
-以上是个人的一点浅见。
+以上是个人的一点浅见。  
+Web development is an exciting activity，a little tough but very creative ，so I wish you will love it.

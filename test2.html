@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" name="author" content="Zhang Mingjie">
+		<title>*-----=== Airbus ===-----*</title>
+        <style type="text/css">
+            html,body {background-color: white;
+                height:100%;
+                margin:auto;
+                width:100%;}
+            h1 {color: white;font-size: 50px}
+            h2 {color: dodgerblue}
+            h3 {color: dodgerblue;font-size: large}
+            h4 {color: black;font-size: 60px}
+            h5 {color: black;font-size: 30px}
+            p {color:black;font-size:20px}
+            a:link {color: dodgerblue;text-align: center;font-size:20px;text-decoration: none}
+            a:hover {text-decoration:underline;color: dodgerblue;}
+            a:visited {text-decoration: none;color: dodgerblue}
+            img {max-height: 100%}
+        </style>
+     </head>
+
+    <script>
+        var times=0;
+        function myclick(){
+            //
+        }
+
+        window.addEventListener('scroll',winScroll);
+        function winScroll(e){
+            var distance= document.body.scrollTop;
+            if(distance>=0 && distance<=600) {
+                if(c.width > 1.3*c.height) {
+                    ctx.drawImage(img, distance, img.height / 8 + img.height / 6, img.width / 2, img.width / 2 * c.height / c.width, 0, 0, c.width, c.height);
+                }
+                else{
+                    ctx.drawImage(img, distance, 0, c.width*img.height/c.height, img.height, 0, 0, c.width, c.height);
+                }
+            }
+            var dis2 = 330;
+            if(distance>=dis2){
+                document.getElementById("title").style.marginTop = 350 - distance + dis2 + "px";
+            }
+            var dis3 = 1500;
+            if(device == 0){
+                dis3 = 1800;
+            }
+            else{
+                dis3 = 1500;
+            }
+            if(distance>=dis3&& (img1.height - img1.width/4*1.5 - distance + dis3)>=0){
+                ctx1.drawImage(img1, 0, img1.height - img1.width/4*1.5 - distance + dis3, img1.width, img1.width/4*1.5, 0, 0, c1.width, c1.height)
+            }
+        }
+
+        var images = [];
+        images[0] = "http://ww3.sinaimg.cn/mw1024/7bcd77dbjw1fa5wn0upowj22nr1rfqtx.jpg";
+        images[1] = "http://ww3.sinaimg.cn/mw690/7bcd77dbjw1fa5wtcxa2cj22sq1uynpf.jpg";
+        images[2] = "http://ww4.sinaimg.cn/mw690/7bcd77dbjw1fa5wt8s7xqj22sq1urnpg.jpg";
+        images[3] = "http://ww3.sinaimg.cn/mw690/7bcd77dbjw1fa5wn5dhu0j22sq1uy4qs.jpg";
+        images[4] = "http://ww4.sinaimg.cn/mw690/7bcd77dbjw1fa5wnrmyrxj21uc17vu0q.jpg";
+        window.onload = function(){
+            setTimeout("change(1)", 5000);
+        };
+        function change(n){
+            document.getElementById("image").setAttribute("src", images[n%5]);
+            n++;
+            setTimeout("change("+n+")",5000);
+        }
+    </script>
+
+	<body>
+        <div>
+            <div  style="background-color: lightgrey;width: 100%;height: 55px;float: left;position:fixed;z-index:10;opacity: 0.95">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Logo_Airbus_2014.svg/600px-Logo_Airbus_2014.svg.png" alt="Airbus logo" width="200px" style="margin-top:5px; margin-left:10px";/>
+            </div>
+
+
+            <div id="title" style="width: 100%;height: 100px;float: left;position: fixed;margin-top: 350px;z-index: 9">
+                <h1 align="center">空中客车 A350-1000</h1>
+            </div>
+
+            <div  style="background-color: white;width: 100%;height: 55px;">
+            </div>
+
+            <canvas id="myCanvas" height="1800" style="width: 100%;height: 900px;solid: #FFFFFF;"></canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                c.width = document.body.clientWidth*2;
+                var ctx = c.getContext("2d");
+                var img = new Image();
+                img.src = "http://ww3.sinaimg.cn/large/7bcd77dbjw1fa5wn0upowj22nr1rfqtx.jpg";
+                var device = 0;
+                img.onload=function(){
+                    var distance= document.body.scrollTop;
+                    if(c.width > 1.3*1800) {
+                        device = 0;
+                        ctx.drawImage(img, distance, img.height / 8 + img.height / 6, img.width / 2, img.width / 2 * c.height / c.width, 0, 0, c.width, c.height);
+                    }
+                    else{
+                        device = 1;
+                        ctx.drawImage(img, distance, 0, c.width*img.height/c.height, img.height, 0, 0, c.width, c.height);
+                    }
+                };
+            </script>
+
+
+            <div align="center" id="words1" align="left" style="background-color: white;width: 100%;height: auto;">
+                <h4 >
+                    空中客车
+                </h4>
+                <p style="font-family: arial,fantasy;">
+                    一家民航飞机制造公司,始于1970年<br>由德国、法国、西班牙与英国共同创立<br>总部设于法国布拉尼亚克</p>
+            </div>
+
+
+            <div id="content" align="center" style="background-color: white;width: 100%;height: 400px;margin-top: 100px" >
+                <div id="content0" style="background-color: white;width: 50%;height: 99%;float: right;margin-top: 50px">
+                    <img id="image" src = http://ww3.sinaimg.cn/mw1024/7bcd77dbjw1fa5wn0upowj22nr1rfqtx.jpg alt="空中客车1" style="width: 90%;float: left;"/>
+                </div>
+
+                <div style="background-color: white;width: 50%;float:left">
+                    <div align="center" id="words">
+                        <h5>
+                            给云雀
+                        </h5>
+                        <p id="demo" style="font-family: arial,fantasy;">
+                            只要把你熟知的欢欣<br>教一半与我歌唱，<br>从我的唇边就会流出<br>一种和谐的热狂，<br>那世人就将听我，像我听你一样。<br></p>
+                        <a id="weibo" href="http://weibo.com/airbus?refer_flag=1001030101_" target="_blank" >空中客车 weibo></a>
+                    </div>
+                </div>
+            </div>
+
+            <div align="center" id="words2" align="left" style="background-color: white;width: 100%;height: auto;margin-top: 150px">
+                <h4 >
+                    A350XWB宽体飞机
+                </h4>
+                <p style="font-family: arial,fantasy;">
+                    全新中型宽体客机系列<br>旨在提高中远程航空运营的效率<br>应对油价波动所带来的挑战<br>满足不断提高的乘客期望并解决日益引起关注的环境问题<br></p>
+            </div>
+
+            <canvas id="myCanvas1" width="2400" height="900" style="width: 100%;height: auto;solid: #FFFFFF;margin-top: 150px;"></canvas>
+            <script>
+                var c1 = document.getElementById("myCanvas1");
+                var ctx1 = c1.getContext("2d");
+                var img1 = new Image();
+                img1.src = "http://ww3.sinaimg.cn/mw690/7bcd77dbjw1fa5wmz9fh8j21961w0e84.jpg";
+                img1.onload=function(){
+                    ctx1.drawImage(img1, 0, img1.height-img1.width/4*1.5, img1.width, img1.width/4*1.5, 0, 0, c1.width, c1.height);
+                };
+            </script>
+
+            <div align="center" style="background-color: white;width: 100%;height: 400px;margin-top: 100px" >
+                <div style="background-color: white;width: 50%;height: 99%;float: right;margin-top: 50px">
+                    <img  src = http://ww1.sinaimg.cn/mw690/7bcd77dbjw1fa3f6vowekj20sh0imaea.jpg alt="空中客车2" style="width: 90%;float: left;"/>
+                </div>
+
+                <div style="background-color: white;width: 50%;float: left;">
+                    <div style="width: 90%; float: right">
+                        <h5 align="left">
+                            系列化产品可满足不同市场需求
+                        </h5>
+                        <p align="left" style="font-family: arial,fantasy;width: 90%;float:left">
+                            A350XWB宽体飞机系列由三款拥有真正的远程运输能力的客机机型组成，航程可达8,500海里/15,580公里。采用典型三级客舱布局，A350-800可搭载270名乘客，A350-900和A350-1000则可分别搭载314名和350名乘客。</p>
+                        <p align="left" style="font-family: arial,fantasy;width: 90%;float:left">
+                            同一系列涵盖三个不同机身尺寸，这使得航空公司可以根据其航线运力需求配置最合适的A350XWB宽体飞机机队，从而确保最大限度地开发其收益潜力。驾驶A350XWB系列的三款机型的飞行员所需资格认证亦完全相同，从而使得航空公司盈利最大化。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div align="center" style="background-color: white;width: 100%;height: 400px;margin-top: 100px" >
+                <div style="width: 50%;height: 99%;float: right;margin-top: 50px">
+                    <img  src = http://ww3.sinaimg.cn/mw690/7bcd77dbjw1fa3fub48kyj20m80bfjt1.jpg alt="空中客车3" style="width: 90%;float: left;"/>
+                </div>
+
+                <div style="width: 50%;float: left;">
+                    <div style="width: 90%; float: right">
+                    <h5 align="left">
+                            舒适、高效的客舱
+                        </h5>
+                        <p align="left" style="font-family: arial,fantasy;width: 90%;float:left">
+                            A350XWB宽体飞机系列拥有非常安静和舒适超凡的客舱。在座椅扶手的高度上，A350XWB宽体飞机客舱的总宽度达到220英寸/5.58米，可以以最高的舒适性标准来布局18英寸宽的座席。并且，该系列的所有机型都具有将收入进一步提高10%的潜在优势。</p>
+                        <p align="left" style="font-family: arial,fantasy;width: 90%;float:left">
+                            乘坐A350XWB宽体飞机的乘客将享受到更大的头顶空间、视野更开阔的舷窗和更大的顶部行李空间。A350XWB宽体飞机在飞机机舱弧顶区域设有非常舒适的机组及乘务人员休息舱，无需占用能够带来商业收益的客舱空间。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div align="center" style="background-color: white;width: 100%;height: 400px;margin-top: 100px" >
+                <div style="width: 50%;height: 99%;float: right;margin-top: 50px">
+                        <img  src = http://ww3.sinaimg.cn/large/a7fe4575gw1e2tz8g1876j.jpg alt="空中客车4" style="width: 90%;float: left;"/>
+                </div>
+
+                <div style="width: 50%;height: 400px;float: left;">
+                    <div style="width: 90%; float: right;">
+                        <h5 align="left">
+                            出色的燃油效率和运营成本
+                        </h5>
+                        <p align="left" style="font-family: arial,fantasy;width: 90%;float:left">
+                            A350XWB宽体飞机系列机体结构重量更轻。超过70%的机体结构采用了先进的材料——其中53%为复合材料，其他还包括钛和先进的铝合金等材料。A350XWB宽体飞机系列机身采用创新性的全新碳纤维增强型复合材料，进一步减少了油耗，同时更易于维护。将复合材料应用于飞机制造，需要遵循循序渐进的的方式，通过多年的实践，空客在复合材料应用方面积累了非常丰富的经验。<br><br></p>
+                    </div>
+                </div>
+            </div>
+
+            <div align="center" style="background-color: white;width: 100%;height: 400px;" >
+                <div style="width: 50%;float: left;">
+                        <img  src = http://ww4.sinaimg.cn/mw690/7bcd77dbjw1fa93a2cdh2j21kw13ldrr.jpg alt="空中客车5" style="width: 90%;float:right;"/>
+                </div>
+
+                <div style="width: 50%;float: right;">
+                    <div style="width: 90%; float: right;">
+                        <p align="left" style="font-family: arial,fantasy;width: 90%;float:left">
+                            空客认同航空运输业可持续发展的需求。A350XWB宽体飞机系列的高效率将有利于环境保护。新一代的罗罗遄达XWB发动机以及最先进的气动性能有助于减少排放，使之不但符合目前的排放标准，同时也会在可预见的未来符合环保要求。与目前正在运营的同级别飞机相比，A350XWB平均每名乘客的二氧化碳排放将降低25%，外部噪声降低15EPNdB（有效可察觉噪声分贝），低于国际民航组织第四章的要求。空中客车公司预测，在未来20年的时间里，全球将需新增双通道飞机6900架（含客机与货机）。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div align="center" style="background-color: white;width: 100%;height: 500px;margin-top: 100px;">
+                <div align="center" style="width: 50%;height: 500px;float: left">
+                    <div>
+                        <h5 id="subtitle1" align="center">A350-1000 首次组装</h5>
+                    </div>
+                    <div>
+                        <video id="video1" width="600px" height="400px" controls>
+                            <source src="http://us.sinaimg.cn/004qtUVxjx076K9ImRqE050401009rv20k01.mp4?Expires=1480429696&KID=unistore,video&ssig=QoBcWegG0f" type="video/mp4">
+                            您的浏览器不支持Video标签
+                        </video>
+                    </div>
+                </div>
+
+                <div align="center" style="width: 50%;height: 500px;float: right">
+                    <div>
+                        <h5 id="subtitle2" align="center">A350-1000 首次试飞</h5>
+                    </div>
+                    <div>
+                        <video id="video2" width="600px" height="400px" controls>
+                            <source src="http://gslb.miaopai.com/stream/94V-RMs78Zqgy~Kaads-wQ__.mp4" type="video/mp4">
+                            您的浏览器不支持Video标签
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div align="center" style="background-color: white;width: 100%;height: 500px;margin-top: 100px;">
+                <div align="center" style="width: 50%;height: 500px;float: left">
+                    <div>
+                        <h5 id="subtitle3" align="center">A350XWB 中国行</h5>
+                    </div>
+                    <div>
+                        <video id="video3" width="600px" height="400px" controls>
+                            <source src="http://gslb.miaopai.com/stream/YmjBVPngcYj3CCo0bq1C2Q__.mp4" type="video/mp4">
+                            您的浏览器不支持Video标签
+                        </video>
+                    </div>
+                </div>
+
+                <div align="center" style="width: 50%;height: 500px;float: right">
+                    <div>
+                        <h5 id="subtitle4" align="center">A350-1000 首飞原片</h5>
+                    </div>
+                    <div>
+                        <video id="video4" width="600px" height="400px" controls>
+                            <source src="http://us.sinaimg.cn/002mu024jx076GOG8Imz05040100hOjC0k01.mp4?Expires=1480434667&KID=unistore,video&ssig=Ph4r481pST" type="video/mp4">
+                            您的浏览器不支持Video标签
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+	</body>
+</html>

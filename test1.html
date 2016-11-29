@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" name="author" content="Zhang Mingjie">
+		<title>*-----=== Airbus ===-----*</title>
+        <style type="text/css">
+            body {background-color: white}
+            h1 {color: dodgerblue}
+            h2 {color: dodgerblue}
+            h3 {color: dodgerblue;font-size: large}
+            p {color: black}
+            a {text-align: center}
+            img {max-height: 100%}
+        </style>
+	</head>
+
+    <script>
+        var times=0;
+        function myclick(){
+            if (times != 0) {
+                document.getElementById("title").innerHTML = "*-----=== 空中客车 A350-1000 ===-----*";
+                document.getElementById("demo").innerHTML = "<i>只要把你熟知的欢欣<br>教一半与我歌唱，<br>从我的唇边就会流出<br>一种和谐的热狂，<br>那世人就将听我，像我听你一样。<br>----雪莱《给云雀》</i>";
+                document.getElementById("weibo").innerHTML = "空中客车 微博";
+                document.getElementById("subtitle").innerHTML = "*-----=== A350-1000 首飞 ===-----*";
+                document.getElementById("video").innerText = "您的浏览器不支持Video标签";
+                document.getElementById("button1").innerText = "中/English";
+                times -= 1;
+            } else {
+                document.getElementById("title").innerHTML = "*-----=== Airbus A350-1000 ===-----*";
+                document.getElementById("demo").innerHTML = "<i>Teach me half the gladness<br>That thy brain must know,<br>Such harmonious madness<br>From my lips would flow<br>The world should listen then,<br>as I am listening now!<br>----Percy Bysshe Shelley<br>《To a Skylark》</i>";
+                document.getElementById("weibo").innerHTML = "Airbus weibo";
+                document.getElementById("subtitle").innerHTML = "*-----=== A350-1000 First flight ===-----*";
+                document.getElementById("video").innerText = "Your browser doesn't support Video tag";
+                document.getElementById("button1").innerText = "English/中";
+                times += 1;
+            }
+        }
+
+        window.addEventListener('scroll',winScroll);
+        function winScroll(e){
+            var distance= document.body.scrollTop;
+            if(distance>=0 && distance <= 250){
+                document.getElementById("content").style.height = 620 - distance + "px";
+                document.getElementById("image").style.height = 620 - distance + "px";
+            }
+            if(distance>=260 && distance <= 430){
+                document.getElementById("content1").style.height = 420 - distance + 260 + "px";
+                document.getElementById("image1").style.height = 410 - distance + 260 + "px";
+            }
+        }
+
+        var images = new Array();
+        images[0] = "http://ww3.sinaimg.cn/mw1024/7bcd77dbjw1fa5wn0upowj22nr1rfqtx.jpg";
+        images[1] = "http://ww3.sinaimg.cn/mw690/7bcd77dbjw1fa5wtcxa2cj22sq1uynpf.jpg";
+        images[2] = "http://ww4.sinaimg.cn/mw690/7bcd77dbjw1fa5wt8s7xqj22sq1urnpg.jpg";
+        images[3] = "http://ww3.sinaimg.cn/mw690/7bcd77dbjw1fa5wn5dhu0j22sq1uy4qs.jpg";
+        images[4] = "http://ww4.sinaimg.cn/mw690/7bcd77dbjw1fa5wnrmyrxj21uc17vu0q.jpg";
+        window.onload = function(){
+            setTimeout("change(1)", 3000);
+        };
+        function change(n){
+            document.getElementById("image1").setAttribute("src", images[n%5]);
+            n++;
+            setTimeout("change("+n+")",3000);
+        }
+    </script>
+
+	<body>
+        <div>
+            <div>
+                <div  style="background-color: lightgrey;width: 200px;float: left;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Logo_Airbus_2014.svg/600px-Logo_Airbus_2014.svg.png" alt="Airbus logo" width="200px"/>
+                </div>
+
+                <div  style="background-color: lightgrey;width: 200px;float: right;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Logo_Airbus_2014.svg/600px-Logo_Airbus_2014.svg.png" alt="Airbus logo" width="200px"/>
+                </div>
+
+                <div>
+                <h1 id="title" align="center">*-----=== 空中客车 A350-1000 ===-----*</h1>
+                <hr>
+                </div>
+            </div>
+
+            <div id="content" align="center" style="width: 100%;height: 620px;" >
+                <div  id="image" style="background-color: white;width: 50%;height: 620px;float: right;">
+                    <img src = http://ww3.sinaimg.cn/mw690/7bcd77dbjw1fa5wmz9fh8j21961w0e84.jpg alt="空中客车A350-1000" style="float: left;"/>
+                </div>
+
+                <div style="background-color: white;width: 50%;float:left">
+                    <div id="words"style="float: right;">
+                        <p id="demo" style="font-family: arial,fantasy;margin-left: 20px;">
+                            <i>只要把你熟知的欢欣<br>教一半与我歌唱，<br>从我的唇边就会流出<br>一种和谐的热狂，<br>那世人就将听我，像我听你一样。<br>----雪莱《给云雀》</i></p>
+                        <hr>
+                        <a id="weibo" href="http://weibo.com/airbus?refer_flag=1001030101_" target="_blank" >空中客车 微博</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="words1" align="left" style="width: 100%;height: auto;">
+                <hr>
+                <p style="font-family: arial,fantasy;margin-left: 20px;">
+                      空中客车公司（英语：Airbus S.A.S.，官方译名译为空中客车；台湾、港澳译为空中巴士），是欧洲一家民航飞机制造公司，于1970年由德国、法国、西班牙与英国共同创立，总部设于法国布拉尼亚克。空中客车公司是欧洲最大的军火供应制造商空中客车集团（Airbus Group）旗下企业。</p>
+            </div>
+
+            <div id="content1" align="center" style="width: 100%;height: 420px;" >
+                <hr>
+                <img id="image1" src = http://ww3.sinaimg.cn/mw1024/7bcd77dbjw1fa5wn0upowj22nr1rfqtx.jpg alt="空中客车1" style="height: 410px;"/>
+            </div>
+
+            <div id="words2" align="left" style="width: 100%;height: auto;">
+                <hr>
+                <p style="font-family: arial,fantasy;margin-left: 20px;">
+                    A350XWB宽体飞机是全新中型宽体客机系列，旨在提高中远程航空运营的效率、应对油价波动所带来的挑战、满足不断提高的乘客期望并解决日益引起关注的环境问题。</p>
+                <h3 align="left">
+                    系列化产品可满足不同市场需求
+                </h3>
+                <p style="font-family: arial,fantasy;margin-left: 20px;">
+                    A350XWB宽体飞机系列由三款拥有真正的远程运输能力的客机机型组成，航程可达8,500海里/15,580公里。采用典型三级客舱布局，A350-800可搭载270名乘客，A350-900和A350-1000则可分别搭载314名和350名乘客。</p>
+                <p style="font-family: arial,fantasy;margin-left: 20px;">
+                    同一系列涵盖三个不同机身尺寸，这使得航空公司可以根据其航线运力需求配置最合适的A350XWB宽体飞机机队，从而确保最大限度地开发其收益潜力。驾驶A350XWB系列的三款机型的飞行员所需资格认证亦完全相同，从而使得航空公司盈利最大化。</p>
+                <h3 align="left">
+                    舒适、高效的客舱
+                </h3>
+                <p style="font-family: arial,fantasy;margin-left: 20px;">
+                    A350XWB宽体飞机系列拥有非常安静和舒适超凡的客舱。在座椅扶手的高度上，A350XWB宽体飞机客舱的总宽度达到220英寸/5.58米，可以以最高的舒适性标准来布局18英寸宽的座席。并且，该系列的所有机型都具有将收入进一步提高10%的潜在优势。</p>
+                <p style="font-family: arial,fantasy;margin-left: 20px;">
+                    乘坐A350XWB宽体飞机的乘客将享受到更大的头顶空间、视野更开阔的舷窗和更大的顶部行李空间。A350XWB宽体飞机在飞机机舱弧顶区域设有非常舒适的机组及乘务人员休息舱，无需占用能够带来商业收益的客舱空间。</p>
+                <h3 align="left">
+                    出色的燃油效率和运营成本
+                </h3>
+                <p style="font-family: arial,fantasy;margin-left: 20px;">
+                    A350XWB宽体飞机系列机体结构重量更轻。超过70%的机体结构采用了先进的材料——其中53%为复合材料，其他还包括钛和先进的铝合金等材料。A350XWB宽体飞机系列机身采用创新性的全新碳纤维增强型复合材料，进一步减少了油耗，同时更易于维护。将复合材料应用于飞机制造，需要遵循循序渐进的的方式，通过多年的实践，空客在复合材料应用方面积累了非常丰富的经验。</p>
+                <p style="font-family: arial,fantasy;margin-left: 20px;">
+                    空客认同航空运输业可持续发展的需求。A350XWB宽体飞机系列的高效率将有利于环境保护。新一代的罗罗遄达XWB发动机以及最先进的气动性能有助于减少排放，使之不但符合目前的排放标准，同时也会在可预见的未来符合环保要求。与目前正在运营的同级别飞机相比，A350XWB平均每名乘客的二氧化碳排放将降低25%，外部噪声降低15EPNdB（有效可察觉噪声分贝），低于国际民航组织第四章的要求。空中客车公司预测，在未来20年的时间里，全球将需新增双通道飞机6900架（含客机与货机）。</p>
+            </div>
+
+            <div align="center">
+                <hr>
+                <div>
+                    <h2 id="subtitle" align="center">*-----=== A350-1000 首飞 ===-----*</h2>
+                </div>
+                <div>
+                    <video id="video" width="600px" height="400px" controls>
+                        <source src="http://gslb.miaopai.com/stream/94V-RMs78Zqgy~Kaads-wQ__.mp4" type="video/mp4">
+                        您的浏览器不支持Video标签
+                    </video>
+                </div>
+            </div>
+
+            <div align="center">
+                <hr>
+                <button id="button1" type="button" onclick="myclick()" >中/English</button>
+            </div>
+        </div>
+	</body>
+</html>

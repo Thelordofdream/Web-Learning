@@ -65,14 +65,16 @@ A learning guide and history of Web Technology mainly with html/css/JavaScript/m
 * pip install shadowsocks
 * 在服务器某文件夹下，touch shadowsocks.json
 * nano shadowsocks.json  
-```{
+```
+{
 "server":"11.22.33.44", 
 "server_port":50003,
 "local_port":1080,
 "password":"123456",
 "timeout":600,
 "method":"aes-256-cfb"
-}```
+}
+```
 
 最后一步的信息根据读者拥有的VPS自行设定，以上范例是无效的无需浪费时间尝试。之后就是以此配置运行Shadowsocks：  
 
@@ -83,13 +85,15 @@ A learning guide and history of Web Technology mainly with html/css/JavaScript/m
 * apt-get install supervisor
 * nano /etc/supervisor/supervisor.conf
 * 在文件最末尾添加
-```[program:shadowsocks]
+```
+[program:shadowsocks]
 command=sslocal -c /home/mudao/shadowsocks.json
 autostart=true
 autorestart=true
 user=root
 log_stderr=true
-logfile=/var/log/shadowsocks.log```  
+logfile=/var/log/shadowsocks.log
+```  
 
 * cp /usr/local/bin/sslocal /bin
 * service supervisor restart 

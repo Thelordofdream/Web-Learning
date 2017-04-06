@@ -117,7 +117,7 @@ logfile=/var/log/shadowsocks.log
 
 * proxychains+空格+需要走代理的指令，如pip
 
-##搭建Web环境
+## 搭建Web环境
 下面要搭建的是Ubuntu LAMP Web环境，LAMP分别是指：  
 
 * Linux
@@ -135,26 +135,26 @@ logfile=/var/log/shadowsocks.log
 * apt-get install mysql-server mysql-client
 * apt-get install php5-mysql
 * cd /var/www/ 此目录也是Apache2的默认文件目录
-* wget https://files.phpmyadmin.net/phpMyAdmin/3.5.2.2/phpMyAdmin-3.5.2.2-all-languages.tar.gz
+* wget <https://files.phpmyadmin.net/phpMyAdmin/3.5.2.2/phpMyAdmin-3.5.2.2-all-languages.tar.gz>
 * tar zxvf phpMyAdmin-3.5.2.2-all-languages.tar.gz
 * cd phpMyAdmin-3.5.2.2-all-languages
 * cp config.sample.inc.php config.inc.php
-* 访问http://localhost/phpmyadmin，输入mysql的用户名和密码进入
+* 访问<http://localhost/phpmyadmin>，输入mysql的用户名和密码进入
 
 如果上述步骤均已成功完成，则在本地浏览器输入服务器的IP地址，则会显示Apache2的默认网页index.html，此文件就在/var/www/html中。读者将html文件放置在此文件夹中，则公网用户通过服务器IP+文件名.html即可访问该网页。此外，Apache2是开机自启动的，不需要特别设置。
 
-##学习HTML
+## 学习HTML
 这里给一个内容基础的学习网站：  
 <http://www.runoob.com/html/html-tutorial.html>
-##学习CSS
+## 学习CSS
 这里给一个CSS的指南类网站：  
 <http://cssreference.io/#align-content>
-##学习JavaScript
+## 学习JavaScript
 JavaScript的语法类似于Java因此并不难学，这里给一个学习目前最强大的新兴3D建模及渲染技术Three.js的学习网站：  
 <http://www.hewebgl.com/article/articledir/1>
-##Web开发IDE
+## Web开发IDE
 最推荐的当然还是JetBrains的WebStorm，除了一般的颜色提示外，此IDE还能提示开发者所使用的语句适配哪些市场上的浏览器。当然，Web开发可以完全不依赖于IDE，只用文本编辑功能也能实现简单的网页。
-##几点忠告
+## 几点忠告
 * 读者所编写的网页，在移动端和PC端浏览器上显示的效果是不一样；因此要实现两种平台同时适配，需要读者额外付出努力，且比较繁复艰难；初学阶段可以不考虑适配移动端。
 * 诸如360、QQ浏览器等以Blink为内核的浏览器对js动画的支持存在问题（不知道是不是笔者代码没写好），因此读者写的很多视觉动画都不能在以上浏览器中很好地展现。
 * 目前，以webkit为内核的Safari和以Blink为内核的Chrome存在一些差异，需要读者注意。

@@ -128,7 +128,7 @@ logfile=/var/log/shadowsocks.log
 接下来开始搭建：  
 
 * apt-get install apache2
-* 打开浏览器输入http://localhost/，测试apache是否安装成功
+* 打开浏览器输入<http://localhost/>，测试apache是否安装成功
 * apt-get install php5
 * apt-get install php5-curl
 * /etc/init.d/apache2 restart

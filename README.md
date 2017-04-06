@@ -1,7 +1,7 @@
 # Web-Learning
 A learning guide and history of Web Technology mainly with html/css/JavaScript/mysql/PHP
 
-##学习门槛
+##学习门槛  
 目前，由于WordPress等轻博客技术的兴起，个人从事简单的Web开发已经不是什么门槛很高的事情。但是，读者依然需要:  
 
 * 比较熟练地掌握诸如bash等Linux Shell的基本指令，如cd、wget、curl、touch、mkdir、echo、rm等指令；
@@ -20,7 +20,7 @@ A learning guide and history of Web Technology mainly with html/css/JavaScript/m
 
 因此，这份入门指南只是描述基本步骤，不会在细节上过多地展开。因此对毫无基础的读者会有一定难度，请读者根据自己的情况进行参考。
 
-##购置服务器
+##购置服务器  
 随着云计算时代的到来，诸如AWS、阿里云、腾讯云等一众优秀的云服务提供商的出现使个人租用服务器以搭建网站变得方面而价格低廉。 
  
 * AWS向大众提供一年免费试用，但是需要绑定一张VISA信用卡；  
@@ -33,7 +33,7 @@ A learning guide and history of Web Technology mainly with html/css/JavaScript/m
 * apt-get update
 * apt-get upgrade  
 
-##远程桌面
+##远程桌面  
 因为传输带宽、网络延迟、操作有限等原因，在很多情况下远程桌面是不必要的，但是还是讲一下如何快速地搭建远程。目前有诸如VNC等几种优秀的远程桌面技术，这里讲解最容易实现的xrdp远程桌面（root帐号不需要sudo）：
 
 * apt-get install xrdp
@@ -57,7 +57,7 @@ A learning guide and history of Web Technology mainly with html/css/JavaScript/m
 
 在软件中配置好服务器信息，其中xrdp的默认端口号是3389，而不是ssh的默认端口22，因此软件中应填写端口号为3389。配置完成后即可进行连接，如果出现连接问题，在本地Shell中重启xrdp即可。
 
-## 配置VPN
+## 配置VPN  
 在服务器上运行VPN也不是必要的，但是由于有时候会使用到pip工具，还是给读者普及一下。在Shell中翻墙，需要Shadowsocks和Proxychains这两个工具：  
 
 * apt-get install python-pip
